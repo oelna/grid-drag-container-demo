@@ -1,0 +1,82 @@
+:root {
+	--outline-width: 0px;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html {
+	font-family: Helvetica Neue, system-ui, sans-serif;
+	font-size: 100%;
+	font-weight: 500;
+	line-height: 1.05;
+	background-color: rgb(212,48,36);
+}
+
+.c-black { color: #000; }
+.c-white { color: #fff; }
+
+.w-200 { font-weight: 200; }
+.w-300 { font-weight: 300; }
+.w-400 { font-weight: 400; }
+.w-500 { font-weight: 500; }
+.w-600 { font-weight: 600; }
+.w-700 { font-weight: 700; }
+
+.raster {
+	outline: var(--outline-width) solid #000;
+	width: 80%;
+	margin-block: 3rem 6rem;
+	margin-inline: auto;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 0.5rem;
+}
+
+@media (min-width: 700px) {
+	.raster {
+		grid-template-columns: 1fr 2fr;
+	}
+}
+
+.raster > div {
+	outline: var(--outline-width) solid #0ff;
+	container-type: inline-size;
+	container-name: grid-element;
+}
+
+@container grid-element (min-width: 400px) {
+	p {
+		font-size: 2em;
+	}
+}
+
+h1, h2 {
+	font-size: 4rem;
+	line-height: 0.96;
+	font-weight: 500;
+	letter-spacing: -0.03em;
+	margin-block-end: 6rem;
+}
+
+h1 em { font-style: normal; }
+
+h2 {
+	margin-block-start: 0.25em;
+	margin-block-end: 0;
+}
+
+.trennlinie {
+	--height: 3px;
+
+	background: #000;
+	height: var(--height);
+	border-radius: calc(var(--height) / 2);
+
+	grid-column-start: span 2;
+}
