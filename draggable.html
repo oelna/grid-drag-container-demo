@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8" />
+	<title>Raster Design</title>
+
+	<link rel="stylesheet" href="draggable.css" />
+</head>
+<body>
+
+	<div class="raster">
+		<div>
+			<p class="c-white">Samstag, 3.September<br />
+			19.00 Uhr</p>
+			<p>Neuinszenierung</p>
+		</div>
+		<div>
+			<p class="c-white">Romantische Oper von Richard Wagner</p>
+			<p>Musikalische Leitung: Christian Vöchting<br />
+			Inszenierung: Hans Hotter<br />
+			Bühnenbild und Kostüme: Max Röthlisberger<br />
+			Choreographie: Renate Ebermann<br />
+			Chöre: Hans Erismann</p>
+		</div>
+		<div>
+			<p class="c-white">Mittwoch, 7.September<br />
+			20.00 Uhr</p>
+			<p>Erstaufführung</p>
+		</div>
+		<div>
+			<p class="c-white">Lyrische Tragödie von Federico Garcia Lorca<br />Musik von Wolfgang Fortner</p>
+			<p>Musikalische Leitung: Armin Jordan<br />
+			Inszenierung: Kurt Ehrhardt<br />
+			Bühnenbild und Kostüme: Toni Businger</p>
+		</div>
+	</div>
+
+	<script src="dragula/draggable.bundle.js"></script>
+	<script>
+
+		const sortable = new Draggable.Sortable(document.querySelector('.raster'), {
+			draggable: 'div'
+		});
+	</script>
+</body>
+</html>
